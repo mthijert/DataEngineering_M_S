@@ -3,6 +3,6 @@ de repository voor de opdracht van Data Engineering.
 
 Gemaakt door:
 
-Stijn IJdel
+Stijn Ydel
 
 Mattijn Thijert
