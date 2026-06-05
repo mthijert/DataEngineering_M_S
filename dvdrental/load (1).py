@@ -12,15 +12,15 @@ def run_load(df_payment, df_customer, df_address, df_city, df_country, df_store)
         con.execute("CREATE OR REPLACE TABLE customer AS SELECT * FROM df_customer")
 
         con.register("df_city", df_city)
-        con.execute("CREATE OR REPLACE TABLE film AS SELECT * FROM df_film")
+        con.execute("CREATE OR REPLACE TABLE film AS SELECT * FROM df_city")
 
         con.register("df_country", df_country)
-        con.execute("CREATE OR REPLACE TABLE film AS SELECT * FROM df_film")
+        con.execute("CREATE OR REPLACE TABLE film AS SELECT * FROM df_country")
     
         con.register("df_store", df_store)
-        con.execute("CREATE OR REPLACE TABLE film AS SELECT * FROM df_film")
+        con.execute("CREATE OR REPLACE TABLE film AS SELECT * FROM df_store")
 
         con.register("df_address", df_address)
-        con.execute("CREATE OR REPLACE TABLE film AS SELECT * FROM df_film")
+        con.execute("CREATE OR REPLACE TABLE film AS SELECT * FROM df_address")
 
     print("✅ Data loaded into DuckDB.")
