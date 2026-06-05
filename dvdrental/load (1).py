@@ -1,6 +1,6 @@
 import duckdb
 
-def run_load(df_payment, df_customer, df_film, df_city, df_country, df_store):
+def run_load(df_payment, df_customer, df_address, df_city, df_country, df_store):
     print("Loading into DuckDB...")
 
     db_path = "C:/Users/rickm/.vscode/DEMO/demo/dvdrental.duckdb"
@@ -18,6 +18,9 @@ def run_load(df_payment, df_customer, df_film, df_city, df_country, df_store):
         con.execute("CREATE OR REPLACE TABLE film AS SELECT * FROM df_film")
     
         con.register("df_store", df_store)
+        con.execute("CREATE OR REPLACE TABLE film AS SELECT * FROM df_film")
+
+        con.register("df_address", df_address)
         con.execute("CREATE OR REPLACE TABLE film AS SELECT * FROM df_film")
 
     print("✅ Data loaded into DuckDB.")
