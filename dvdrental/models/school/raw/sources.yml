@@ -6,3 +6,7 @@ sources:
     tables:
       - name: payment
       - name: customer
+      - name: address
+      - name: city
+      - name: country
+      - name: store
