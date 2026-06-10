@@ -1,4 +1,4 @@
--- models/star/dim/Dim_Customer.sql
+-- models/school/star/dim/Dim_Customer.sql
 
 SELECT
     *

@@ -1,0 +1,19 @@
+demo:
+  outputs:
+    postgres:
+      type: postgres
+      host: localhost
+      user: postgres
+      password: admin
+      port: 5432
+      dbname: dvdrental
+      schema: public
+      threads: 1
+
+    duckdb:
+      type: duckdb
+      path: dvdrental.duckdb
+      threads: 4
+      schema: main
+      
+  target: duckdb

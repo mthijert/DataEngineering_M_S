@@ -1,4 +1,4 @@
--- models/star/fct/Fact_Payment.sql
+-- models/school/star/fct/Fact_Payment.sql
 
 SELECT
     customer_id,
