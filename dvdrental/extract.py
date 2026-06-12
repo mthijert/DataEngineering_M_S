@@ -14,4 +14,4 @@ def run_extract():
     df_store= pd.read_sql("SELECT * FROM store;", engine)
 
     print("✅ Extracted all usefull data.")
-    return df_payment, df_customer, df_address, df_country, df_city, df_store
+    return df_payment, df_customer, df_address, df_city, df_country, df_store
