@@ -106,3 +106,71 @@ There are 4 unused configuration paths:
 [0m12:53:53.061049 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017A1B8A4460>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017A1E392500>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017A1E393880>]}
 [0m12:53:53.061049 [debug] [MainThread]: Flushing usage events
 [0m12:53:53.472906 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:29:42.389318 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DEFBB77AC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DEFE4E0460>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DEFE4E01F0>]}
+
+
+============================== 11:29:42.396878 | 307bf22d-86d4-439e-8b31-99d92daf81a5 ==============================
+[0m11:29:42.396878 [info ] [MainThread]: Running with dbt=1.11.11
+[0m11:29:42.396878 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\stijn/.dbt', 'use_colors': 'True', 'invocation_command': 'dbt ', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\stijn\\OneDrive\\Documenten\\GitHub\\DataEngineering_M_S\\logs'}
+[0m11:29:42.832410 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '307bf22d-86d4-439e-8b31-99d92daf81a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DEFC688670>]}
+[0m11:29:42.915426 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '307bf22d-86d4-439e-8b31-99d92daf81a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DEFC6584F0>]}
+[0m11:29:42.920245 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m11:29:43.323397 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m11:29:46.124219 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m11:29:46.124219 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m11:29:46.124219 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m11:29:46.124219 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 4 unused configuration paths:
+- models.school.raw
+- models.school.star
+- models.school.star.fct
+- models.school.star.dim
+[0m11:29:46.144518 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '307bf22d-86d4-439e-8b31-99d92daf81a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DEFE79C130>]}
+[0m11:29:46.208187 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\stijn\OneDrive\Documenten\GitHub\DataEngineering_M_S\target\manifest.json
+[0m11:29:46.221129 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\stijn\OneDrive\Documenten\GitHub\DataEngineering_M_S\target\semantic_manifest.json
+[0m11:29:46.224103 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '307bf22d-86d4-439e-8b31-99d92daf81a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DEFE758940>]}
+[0m11:29:46.224103 [info ] [MainThread]: Found 485 macros
+[0m11:29:46.224103 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '307bf22d-86d4-439e-8b31-99d92daf81a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DEFE7610C0>]}
+[0m11:29:46.224103 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m11:29:46.239917 [debug] [MainThread]: Command end result
+[0m11:29:46.263354 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\stijn\OneDrive\Documenten\GitHub\DataEngineering_M_S\target\manifest.json
+[0m11:29:46.269347 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\stijn\OneDrive\Documenten\GitHub\DataEngineering_M_S\target\semantic_manifest.json
+[0m11:29:46.276694 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\stijn\OneDrive\Documenten\GitHub\DataEngineering_M_S\target\run_results.json
+[0m11:29:46.277737 [debug] [MainThread]: Command `cli run` succeeded at 11:29:46.277737 after 4.05 seconds
+[0m11:29:46.279755 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DEFBB77AC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DEFC6584F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DEFBF21300>]}
+[0m11:29:46.279755 [debug] [MainThread]: Flushing usage events
+[0m11:29:46.741705 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m12:31:41.493205 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C2D41343D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C2D6788460>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C2D67881F0>]}
+
+
+============================== 12:31:41.493205 | 629d9494-b34b-403f-b73b-2b189d999d90 ==============================
+[0m12:31:41.493205 [info ] [MainThread]: Running with dbt=1.11.11
+[0m12:31:41.493205 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\stijn/.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt ', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\stijn\\OneDrive\\Documenten\\GitHub\\DataEngineering_M_S\\logs'}
+[0m12:31:41.872971 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '629d9494-b34b-403f-b73b-2b189d999d90', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C2D1E99BD0>]}
+[0m12:31:41.963384 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '629d9494-b34b-403f-b73b-2b189d999d90', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C2D5053970>]}
+[0m12:31:41.963384 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m12:31:42.701338 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m12:31:44.757761 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m12:31:44.757761 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m12:31:44.757761 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m12:31:44.757761 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 4 unused configuration paths:
+- models.school.star.fct
+- models.school.star.dim
+- models.school.star
+- models.school.raw
+[0m12:31:44.763990 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '629d9494-b34b-403f-b73b-2b189d999d90', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C2D6C98130>]}
+[0m12:31:44.816208 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\stijn\OneDrive\Documenten\GitHub\DataEngineering_M_S\target\manifest.json
+[0m12:31:44.834125 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\stijn\OneDrive\Documenten\GitHub\DataEngineering_M_S\target\semantic_manifest.json
+[0m12:31:44.853738 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '629d9494-b34b-403f-b73b-2b189d999d90', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C2D6C4DF00>]}
+[0m12:31:44.853738 [info ] [MainThread]: Found 485 macros
+[0m12:31:44.853738 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '629d9494-b34b-403f-b73b-2b189d999d90', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C2D6C54AC0>]}
+[0m12:31:44.853738 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m12:31:44.853738 [debug] [MainThread]: Command end result
+[0m12:31:44.889433 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\stijn\OneDrive\Documenten\GitHub\DataEngineering_M_S\target\manifest.json
+[0m12:31:44.892036 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\stijn\OneDrive\Documenten\GitHub\DataEngineering_M_S\target\semantic_manifest.json
+[0m12:31:44.892036 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\stijn\OneDrive\Documenten\GitHub\DataEngineering_M_S\target\run_results.json
+[0m12:31:44.892036 [debug] [MainThread]: Command `cli run` succeeded at 12:31:44.892036 after 3.48 seconds
+[0m12:31:44.892036 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C2D41343D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C2D670B670>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C2CF752BF0>]}
+[0m12:31:44.892036 [debug] [MainThread]: Flushing usage events
+[0m12:31:45.340335 [debug] [MainThread]: An error was encountered while trying to flush usage events
