@@ -1,6 +1,6 @@
 import duckdb
 
-def run_load(df_payment, df_customer, df_address, df_city, df_country, df_store, df_staff):
+def run_load(df_payment, df_customer, df_address, df_city, df_country, df_store, df_staff, df_rental):
     print("Loading into DuckDB...")
 
     db_path = "C:/Users/stijn/OneDrive/Documenten/GitHub/DataEngineering_M_S/dvdrental/dvdrental.duckdb"
@@ -25,4 +25,8 @@ def run_load(df_payment, df_customer, df_address, df_city, df_country, df_store,
 
         con.register("df_staff", df_staff)
         con.execute("CREATE OR REPLACE TABLE staff AS SELECT * FROM df_address")
+
+        con.register("df_rental", df_rental)
+        con.execute("CREATE OR REPLACE TABLE rental AS SELECT * FROM df_address")
+
     print("✅ Data loaded into DuckDB.")
