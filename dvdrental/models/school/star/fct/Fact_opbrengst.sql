@@ -1,16 +1,23 @@
--- models/school/star/fct/Fact_Opbrengst.sql
-
+-- models/school/star/fct/Fact_opbrengst.sql
+-- Eindresultaat: 1 rij per stad = gemiddelde opbrengst per klant in die stad
+WITH opbrengst_per_klant AS (
+    SELECT
+        c.customer_id,
+        klant_stad.city AS stad,
+        SUM(p.amount)   AS opbrengst          -- totale opbrengst per klant
+    FROM {{ source('dvdrental', 'payment') }} p
+    JOIN {{ source('dvdrental', 'customer') }} c
+        ON p.customer_id = c.customer_id
+    JOIN {{ source('dvdrental', 'address') }} klant_adres
+        ON c.address_id = klant_adres.address_id
+    JOIN {{ source('dvdrental', 'city') }} klant_stad
+        ON klant_adres.city_id = klant_stad.city_id
+    GROUP BY c.customer_id, klant_stad.city
+)
 SELECT
-    klant_stad.city AS stad,
-    c.customer_id,
-    AVG(p.amount) AS gemiddelde_opbrengst
-FROM {{ source('dvdrental', 'payment') }} p
-JOIN {{ source('dvdrental', 'customer') }} c
-    ON p.customer_id = c.customer_id
-JOIN {{ source('dvdrental', 'address') }} klant_adres
-    ON c.address_id = klant_adres.address_id
-JOIN {{ source('dvdrental', 'city') }} klant_stad
-    ON klant_adres.city_id = klant_stad.city_id
-GROUP BY
-    klant_stad.city,
-    c.customer_id
+    stad,
+    AVG(opbrengst) AS gemiddelde_opbrengst_per_klant,
+    COUNT(*)       AS aantal_klanten          -- handig als context (zie hieronder)
+FROM opbrengst_per_klant
+GROUP BY stad
+ORDER BY gemiddelde_opbrengst_per_klant DESC
