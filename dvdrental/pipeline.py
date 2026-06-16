@@ -29,8 +29,8 @@ def run_dbt():
 def main():
     print("🚀 Starting ETL pipeline...")
 
-    df_payment, df_customer, df_address, df_country, df_city, df_store = run_extract()
-    run_load(df_payment, df_customer, df_address, df_country, df_city, df_store)
+    df_payment, df_customer, df_address, df_country, df_city, df_store, df_staff = run_extract()
+    run_load(df_payment, df_customer, df_address, df_country, df_city, df_store, df_staff)
     run_dbt()
 
     print("🏁 Pipeline complete.")

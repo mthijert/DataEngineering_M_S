@@ -12,6 +12,7 @@ def run_extract():
     df_city= pd.read_sql("SELECT * FROM city; ", engine )
     df_country= pd.read_sql("SELECT * FROM country; ", engine )
     df_store= pd.read_sql("SELECT * FROM store;", engine)
+    df_staff= pd.read_sql("SELECT * FROM staff;", engine)
 
     print("✅ Extracted all usefull data.")
-    return df_payment, df_customer, df_address, df_city, df_country, df_store
+    return df_payment, df_customer, df_address, df_city, df_country, df_store, df_staff
