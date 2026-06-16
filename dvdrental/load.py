@@ -24,9 +24,9 @@ def run_load(df_payment, df_customer, df_address, df_city, df_country, df_store,
         con.execute("CREATE OR REPLACE TABLE address AS SELECT * FROM df_address")
 
         con.register("df_staff", df_staff)
-        con.execute("CREATE OR REPLACE TABLE staff AS SELECT * FROM df_address")
+        con.execute("CREATE OR REPLACE TABLE staff AS SELECT * FROM df_staff")
 
         con.register("df_rental", df_rental)
-        con.execute("CREATE OR REPLACE TABLE rental AS SELECT * FROM df_address")
+        con.execute("CREATE OR REPLACE TABLE rental AS SELECT * FROM df_rental")
 
     print("✅ Data loaded into DuckDB.")
