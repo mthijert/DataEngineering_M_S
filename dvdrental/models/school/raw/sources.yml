@@ -10,3 +10,5 @@ sources:
       - name: city
       - name: country
       - name: store
+      - name: staff
+      - name: rental
